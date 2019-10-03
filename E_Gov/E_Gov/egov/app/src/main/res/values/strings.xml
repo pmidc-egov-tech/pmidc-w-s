@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PMIDC</string>
+    <string-array name="service">
+        <item>WATERCHARGES</item>
+        <item>SEWERAGECHARGES</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:padding="5dp"
+        android:id="@+id/rlTitle">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="5dp"
+            android:onClick="onClick"
+            android:id="@+id/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receipt"
+            android:textSize="20sp"
+            android:textColor="#2782F5"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btPrint"
+        android:layout_below="@+id/rlTitle"
+        android:id="@+id/llOuter"
+        android:orientation="vertical"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:id="@+id/svReceipt">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:id="@+id/llReceipt"
+                android:layout_margin="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvTitle"
+                    android:layout_gravity="center_horizontal"
+                    android:text="PUNJAB MUNICIPAL INFRASTRUCTURE \n DEVELOPMENT C  "
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@color/black_dark"
+                    android:textStyle="normal"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvReceiptType"
+                    android:text="Water Charges Receipt"
+                    android:textColor="@color/black_dark"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"/>
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/tvStarsTop"-->
+                    <!--android:text="***********************"-->
+                    <!--android:textStyle="normal"-->
+                    <!--android:textColor="@color/black_dark"-->
+                    <!--android:textSize="18sp"/>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvConsumerNo"
+                        android:text="Consumer No.:   "
+                        android:textColor="@color/black_dark"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvReceiptNo"
+                        android:text="Receipt No.  :   "
+                        android:textColor="@color/black_dark"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvReceiptDate"
+                        android:text="Receipt Date :   "
+                        android:textColor="@color/black_dark"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvOwnerName"
+                        android:text="Owner Name  :   "
+                        android:textColor="@color/black_dark"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvHouseNo"
+                        android:text="House No.  :   "
+                        android:textColor="@color/black_dark"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvMode"
+                        android:text="Mode     :   "
+                        android:textColor="@color/black_dark"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvInstructionNo"
+                        android:text="Instruction No. :   "
+                        android:textColor="@color/black_dark"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvTransactionNo"
+                        android:text="Transaction No.       :   "
+                        android:textColor="@color/black_dark"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvAmountPaid"
+                        android:text="Paid Amount   :   "
+                        android:textColor="@color/black_dark"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="2dp"/>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvService"
+                        android:text="Service    :   "
+                        android:textColor="@color/black_dark"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="2dp"/>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvPaidBy"
+                        android:text="Paid By     :   "
+                        android:textColor="@color/black_dark"
+                        android:textSize="16sp"
+                        android:textStyle="normal"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="2dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+    <Button
+        android:background="#2782F5"
+        android:layout_height="55dp"
+        android:layout_width="match_parent"
+        android:id="@+id/btPrint"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:text="PRINT"
+        android:onClick="onClick"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="30dp"
+        android:textAllCaps="false"/>
+
+</RelativeLayout>
